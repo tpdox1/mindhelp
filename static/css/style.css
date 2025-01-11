@@ -1,0 +1,89 @@
+.page-wrap {
+    flex: 1 1 0;
+  }
+
+#main-page .therapist__actions {
+    margin-top: 95px;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+  
+    #main-page .therapist__actions {
+      margin-top: 30px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+  
+    #main-page .therapist__actions {
+      margin-top: 106px;
+    }
+  }
+
+/* Общие стили */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Форматирование контейнера формы */
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Форматирование каждого элемента формы */
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  width: 30%;
+}
+
+.form-group input,
+.form-group select {
+  width: 65%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #5b9bd5;
+  box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
+  outline: none;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  margin-right: 10px;
+}

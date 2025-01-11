@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Психологи онлайн на MindHelp</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">    
+  
+
+</head>
+
+
+<body>
+
+  <div class="page-wrap after">
+    <div class="header-container b__s">
+      <div class="header !_z-[101]">
+        <div class="header__overlay"></div>
+        <div class="container">
+          <div class="row header__row flex-nowrap">
+            <div class="col-auto col-lg-2">
+              <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='imgs/logo.svg') }}" class="header__logo">
+              </a>
+            </div>
+            <div class="col px-0">
+              <nav class="navbar navbar-expand navbar-light justify-content-center p-0">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a target="_blank" class="nav-link" ">Для психологов</a>
+                </li>
+                <li class=" nav-item">
+                      <a target="_blank" class="nav-link">Для бизнеса</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/tests" class="nav-link">
+                      <div>Психологические тесты</div>
+                    </a>
+                  </li>
+                  <li class="nav-item d-sm-none">
+                    <a class="nav-link header__link" href="/auth">
+                      Вход
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-auto col-lg-3">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <div class="header__actions">
+                    <a class="nav-link header__link" href="/auth">
+                      <svg class="icon icon-lock header__link-icon">
+                        <use xlink:href="#lock"></use>
+                      </svg>
+                      Вход
+                    </a> <a class="header__btn text-nowrap" href="/auth/signup">
+                      Регистрация&nbsp;
+                    </a>
+                  </div>
+                  <button class="header__menu-btn" type="button" data-toggle="dropdown" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a target="_blank" class="dropdown-item" href="https://work.yasno.live/psychologist">Для
+                      психологов</a>
+                    <a target="_blank" class="dropdown-item"
+                      href="https://business.yasno.live/?utm_source=Yasno_live&amp;utm_medium=refferal&amp;utm_content=button">Для
+                      бизнеса</a>
+                    <a class="dropdown-item" href="/tests">Психологические тесты</a>
+                    <a class="dropdown-item" href="/blog">Блог</a>
+                      Вход
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="main-page">
+      <section class="css-reset banner">
+        <div class="container">
+          <div class="banner__content">
+            <h1 class="banner__title-h1">Консультации с&nbsp;психологом онлайн</h1>
+            <h2 class="banner__title">
+            </h2>
+            <div class="banner__actions">
+              <div>
+                <input type="checkbox" id="banner__toggle_head" class="banner__toggle" />
+                <label for="banner__toggle_head" class="banner__container">
+                  <div>Для себя</div>
+                  <div>Для двоих</div>
+                </label>
+                <p class="banner__info">
+                  <span class="price__single"><br>
+                    50 мин <br><span >2 750 ₽</span>
+                  </span>
+                  <span class="price__couple"><br>
+                    2 часа <br> <span style="white-space: nowrap">4 750 ₽</span>
+                  </span>
+                </p>
+              </div>
+              <a class="banner__btn ysn-main-page-button" href="/auth/signup">Подобрать психолога</a>
+
+              <div class="banner__mobile-sign">
+                <span class="banner__mobile-sign-text">
+                  <span class="banner__mobile-sign-text-wrap">Из любого места, <br>с любого устройства</span>
+                  <img class="banner__mobile-sign-line lazyload"
+                    data-src=imgs/mobile-intro-sign-246407cdb949da0d94e80969edcbe048a3d758c1f1c439d3cfca2fa6d139069c.svg
+                    src=imgs/mobile-intro-sign-246407cdb949da0d94e80969edcbe048a3d758c1f1c439d3cfca2fa6d139069c.svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="banner__bgs">
+          <div class="banner__sign">
+            <div class="banner__sign-line">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="css-reset helps">
+        <div class="container">
+          <div class="helps__content">
+            <h2 class="helps__title">
+              С&nbsp;чем <span> поможет</span> психолог?
+            </h2>
+            <div class="swiper-container helps__slider">
+              <div class="swiper-wrapper helps__list">
+                <div class="swiper-slide helps__item">
+                  <div class="helps__image">
+                    <img class=" lazyload" src="{{ url_for('static', filename='imgs/panda.png') }}">
+                    
+                  </div>
+                  <p class="helps__text">Уметь находить общий язык со всеми людьми</p>
+                </div>
+                <div class="swiper-slide helps__item">
+                  <div class="helps__image">
+                    <img class=" lazyload" src="{{ url_for('static', filename='imgs/bambo.png') }}">
+                  </div>
+                  <p class="helps__text"> Управлять стрессом и тревогой </p>
+                </div>
+                <div class="swiper-slide helps__item">
+                  <div class="helps__image">
+                    <img class=" lazyload" src="{{ url_for('static', filename='imgs/panda_2.png') }}">
+                  </div>
+                  <p class="helps__text">Принять себя и повысить самооценку</p>
+                </div>
+                <div class="swiper-slide helps__item">
+                  <div class="helps__image">
+                    <img class=" lazyload" src="{{ url_for('static', filename='imgs/bambo.png') }}">
+                  </div>
+                  <p class="helps__text">Пережить переезд, расставание, потерю близкого</p>
+                </div>
+                <div class="swiper-slide helps__item">
+                  <div class="helps__image">
+                    <img class=" lazyload" src="{{ url_for('static', filename='imgs/panda_3.png') }}">
+                  </div>
+                  <p class="helps__text">Научиться отстаивать личные границы</p>
+                </div>
+                <div class="swiper-slide helps__item">
+                  <div class="helps__image">
+                    <img class=" lazyload" src="{{ url_for('static', filename='imgs/bambo.png') }}">
+                  </div>
+                  <p class="helps__text">Найти мотивацию работать</p>
+                </div>
+              </div>
+              <div id="helps-swiper-pagination" class="swiper-pagination"></div>
+            </div>
+            <div class="helps__actions">
+              <a class="helps__btn ysn-main-page-button" href="/auth/signup">Хочу обсудить свою ситуацию</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="css-reset therapist">
+        <div class="container">
+          <div class="therapist__content">
+            <h2 class="therapist__title">
+              Как мы <span>выбираем</span> лучших специалистов
+            </h2>
+            <ul class="therapist__list">
+              <li class="therapist__item">
+                <p class="therapist__caption">Образование</p>
+                <ul class="thin-bullet">
+                  <li>Наличие высшего образования в области психологии или медицины (психиатрия)</li>
+                  <li>Документы, подтверждающие переподготовку в психотерапевтической сфере</li>
+                </ul>
+              </li>
+              <li class="therapist__item">
+                <p class="therapist__caption">Опыт работы</p>
+                <ul class="thin-bullet">
+                  <li>Подтвержденный опыт работы в области психотерапии не менее 3 лет</li>
+                  <li>Практика, направленная на решение реальных проблем клиентов</li>
+                </ul>
+              </li>
+              <li class="therapist__item !_mr-0">
+                <p class="therapist__caption">Рекомендации</p>
+                <ul class="thin-bullet">
+                  <li>Рекомендации от профессиональных супервизоров</li>
+                  <li>Отзывы коллег, которые могут подтвердить уровень профессионализма</li>
+                  <li>Рекомендации от психологических ассоциаций или организаций</li>
+                </ul>
+              </li>
+              <li class="therapist__item !_mt-0 md:!_mt-12">
+                <p class="therapist__caption">Собеседование</p>
+                <ul class="thin-bullet">
+                  <li>Обсуждаем конкретные примеры успешных кейсов из практики</li>
+                  <li>Проверяем практические навыки работы с клиентами</li>
+                  <li>Оцениваем способность кандидата к анализу и решению проблем</li>
+                </ul>
+              </li>
+              <li class="therapist__item !_mt-0 md:!_mt-12">
+                <p class="therapist__caption">Этика</p>
+                <ul class="thin-bullet">
+                  <li>Психолог должен разделять наши ценности и принципы</li>
+                  <li>Профессионал не имеет права судить или осуждать клиентов</li>
+                  <li>Этика и уважение к клиенту — главные ориентиры в работе психолога</li>
+                </ul>
+              </li>
+              <li class="therapist__item !_mt-0 md:!_mt-12">
+                <p class="therapist__caption">Профессиональное развитие</p>
+                <ul class="thin-bullet">
+                  <li>Регулярное участие в семинарах и тренингах для психологов</li>
+                  <li>Супервизии с опытными специалистами для углубленного анализа случаев</li>
+                  <li>Поощряем участие в научных и профессиональных конференциях</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="therapist__actions">
+              <a class="therapist__btn ysn-main-page-button" href="/auth/signup">Записаться на консультацию</a>
+              <div class="row d-flex flex-column align-items-center justify-content-center mt-5">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      

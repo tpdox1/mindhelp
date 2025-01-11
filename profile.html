@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Психологи онлайн на MindHelp</title>
+  <link rel="stylesheet" type="text/css"
+    href="css/application.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">    
+    
+</head>
+
+<body>
+
+  <div class="page-wrap after">
+    <div class="header-container b__s">
+      <div class="header !_z-[101]">
+        <div class="header__overlay"></div>
+        <div class="container">
+          <div class="row header__row flex-nowrap">
+            <div class="col-auto col-lg-2">
+              <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='imgs/logo.svg') }}" class="header__logo">
+              </a>
+            </div>
+            <div class="col px-0">
+              <nav class="navbar navbar-expand navbar-light justify-content-center p-0">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a target="_blank" class="nav-link">Для психологов</a>
+                  </li>
+                  <li class=" nav-item">
+                    <a target="_blank" class="nav-link">Для бизнеса</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/tests" class="nav-link">
+                      <div>Психологические тесты</div>
+                    </a>
+                  </li>
+                  <li class="nav-item d-sm-none">
+                    <a class="nav-link header__link" href="/auth">
+                      Вход
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-auto col-lg-3">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <div class="header__actions">
+                    <a class="nav-link header__link" href="/auth">
+                      <svg class="icon icon-lock header__link-icon">
+                        <use xlink:href="#lock"></use>
+                      </svg>
+                      Вход
+                    </a>
+                    <a class="header__btn text-nowrap" href="/auth/signup">
+                      Регистрация&nbsp;
+                    </a>
+                  </div>
+                  <button class="header__menu-btn" type="button" data-toggle="dropdown" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a target="_blank" class="dropdown-item" href="https://work.yasno.live/psychologist">Для
+                      психологов</a>
+                    <a target="_blank" class="dropdown-item"
+                      href="https://business.yasno.live/?utm_source=Yasno_live&amp;utm_medium=refferal&amp;utm_content=button">Для
+                      бизнеса</a>
+                    <a class="dropdown-item" href="/tests">Психологические тесты</a>
+                    <a class="dropdown-item" href="/blog">Блог</a>
+                    Вход
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="questions">
+      <div class="container">
+        <div class="form-container">
+          <h2>Общие вопросы</h2>
+          <form id="user-info">
+            <form id="consultation-form" action="/submit" method="post">
+              <div class="form-group">
+                <label for="name">Имя или псевдоним</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="experience">Был ли у вас опыт терапии?</label>
+                <select id="experience" name="experience">
+                  <option value="yes">Да</option>
+                  <option value="no">Нет</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="timezone">Часовой пояс</label>
+                <select id="timezone" name="timezone">
+                  <option value="Moscow">+03:00 Москва, Россия</option>
+                  <option value="other">Другой</option>
+                </select>
+              </div>
+            </form>
+            
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="specialists">
+      <div class="container">
+        <div class="form-container">
+          <h2>Выбор психолога</h2>
+          <p>168 специалистов могут вам подойти</p>
+          <form id="consultation-form">
+            <div class="form-group">
+              <label for="consultation-type">Вид консультации</label>
+              <select id="consultation-type" name="consultation-type">
+                <option value="individual">Индивидуальная</option>
+                <option value="couple">Парная</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="priority-topic">Что хотели бы обсудить в первую очередь?</label>
+              <select id="priority-topic" name="priority-topic">
+                <option value="relationship">Сложности в отношениях</option>
+                <option value="dependency">Созависимость</option>
+                <option value="divorce">Развод</option>
+                <option value="betrayal">Измена</option>
+                <option value="children">Рождение детей</option>
+                <option value="else">Другое</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="preference">С кем комфортнее работать?</label>
+              <select id="preference" name="preference">
+                <option value="any">Все равно</option>
+                <option value="male">Мужчина</option>
+                <option value="female">Женщина</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <div class="container">
+        <div class="form-container">
+          <h2>Предпочтение по времени сессии</h2>
+          <form id="schedule-form">
+            <div class="form-group">
+              <label for="date">Дата</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+              <label for="time">Время (местное)</label>
+              <select id="time" name="time">
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div id="main-page">
+      <div class="therapist__actions">
+        <a class="therapist__btn ysn-main-page-button">Записаться на консультацию</a>
+        <div class="row d-flex flex-column align-items-center justify-content-center mt-5">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
