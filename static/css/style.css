@@ -87,3 +87,10 @@ h2 {
   display: inline-block;
   margin-right: 10px;
 }
+
+
+.test-card {
+  display: inline-block;
+  width: 30%; 
+  margin: 0 1%; 
+}

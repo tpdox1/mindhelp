@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Подача сертификата - MindHelp</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">
+</head>
+
+<body>
+
+  <div class="page-wrap after">
+    <div class="header-container b__s">
+      <div class="header !_z-[101]">
+        <div class="header__overlay"></div>
+        <div class="container">
+          <div class="row header__row flex-nowrap">
+            <div class="col-auto col-lg-2">
+              <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='imgs/logo.svg') }}" class="header__logo">
+              </a>
+            </div>
+            <div class="col px-0">
+              <nav class="navbar navbar-expand navbar-light justify-content-center p-0">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="/feedback" target="_blank" class="nav-link">Обратная связь</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/certificats" target="_blank" class="nav-link">Сертификаты</a>
+                  </li>
+                  <li class="nav-item d-sm-none">
+                    <a class="nav-link header__link" href="/auth">
+                      Вход
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-auto col-lg-3">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <div class="header__actions">
+                    <a class="nav-link header__link" href="/auth">
+                      <svg class="icon icon-lock header__link-icon">
+                        <use xlink:href="#lock"></use>
+                      </svg>
+                      Вход
+                    </a>
+                    <a class="header__btn text-nowrap" href="/auth">
+                      Регистрация&nbsp;
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-page">
+      <section class="css-reset banner">
+        <div class="container">
+          <div class="banner__content">
+            <h1 class="banner__title-h1">Получить сертификат</h1>
+            <h2 class="banner__title">Психолог онлайн</h2>
+            <div class="banner__actions">
+              <p class="banner__info">
+                Пройдите курс и получите свой сертификат для успешного завершения.
+              </p>
+              <a class="banner__btn ysn-main-page-button" href="/auth">Получить сертификат</a>
+            </div>
+          </div>
+        </div>
+        <div class="banner__bgs">
+          <div class="banner__sign">
+            <div class="banner__sign-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="css-reset helps">
+        <div class="container">
+          <div class="helps__content">
+            <h2 class="helps__title">
+              Почему вам стоит получить <span>сертификат?</span>
+            </h2>
+            <div class="helps__list">
+              <div class="helps__item">
+                <p class="helps__text">Документ подтверждающий ваши навыки и достижения.</p>
+              </div>
+              <div class="helps__item">
+                <p class="helps__text">Дополнительные возможности для карьерного роста.</p>
+              </div>
+              <div class="helps__item">
+                <p class="helps__text">Психологические и практические знания для личного развития.</p>
+              </div>
+            </div>
+            <div class="helps__actions">
+              <a class="helps__btn ysn-main-page-button" href="/auth">Зарегистрироваться для получения сертификата</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="css-reset therapist">
+        <div class="container">
+          <div class="therapist__content">
+            <h2 class="therapist__title">
+              Как получить сертификат
+            </h2>
+            <ul class="therapist__list">
+              <li class="therapist__item">
+                <p class="therapist__caption">Пройдите онлайн курс</p>
+              </li>
+              <li class="therapist__item">
+                <p class="therapist__caption">Успешно сдайте тест</p>
+              </li>
+              <li class="therapist__item">
+                <p class="therapist__caption">Получите сертификат</p>
+              </li>
+            </ul>
+            <div class="therapist__actions">
+              <a class="therapist__btn ysn-main-page-button" href="/auth">Записаться на курс</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

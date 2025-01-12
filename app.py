@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template_string, jsonify, redirect, url_for, render_template
 import psycopg2
 from psycopg2 import OperationalError
+import os
 
 app = Flask(__name__)
 
@@ -215,6 +216,13 @@ def get_client_info():
         return jsonify({"error": str(e)}), 500
 
     
+@app.route('/certificats')
+def certificats():  
+    return render_template('certificats.html')
+
+@app.route('/feedback')
+def tests(): 
+    return render_template('feedback.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

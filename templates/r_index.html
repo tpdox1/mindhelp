@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Психологи онлайн на MindHelp</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">
+</head>
+
+<body>
+
+  <div class="page-container">
+    <header class="main-header">
+      <div class="header-overlay"></div>
+      <div class="container">
+        <div class="header-row flex-nowrap">
+          <div class="logo-container">
+            <a href="{{ url_for('index') }}">
+              <img src="{{ url_for('static', filename='imgs/logo.svg') }}" class="logo">
+            </a>
+          </div>
+          <nav class="navbar">
+            <ul class="navbar-links">
+              <li class="navbar-item">
+                <a target="_blank" class="navbar-link">Для психологов</a>
+              </li>
+              <li class="navbar-item">
+                <a target="_blank" class="navbar-link">Для бизнеса</a>
+              </li>
+              <li class="navbar-item">
+                <a href="/tests" class="navbar-link">Психологические тесты</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="/auth">Вход</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-actions">
+            <a href="/auth" class="auth-link">Вход</a>
+            <a href="/auth" class="register-button">Регистрация</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-banner">
+      <div class="container">
+        <div class="banner-content">
+          <h1 class="banner-title">Консультации с психологом онлайн</h1>
+          <div class="banner-options">
+            <input type="checkbox" id="banner-toggle" class="banner-toggle" />
+            <label for="banner-toggle" class="banner-toggle-label">
+              <div>Для себя</div>
+              <div>Для двоих</div>
+            </label>
+            <p class="banner-info">
+              <span class="price-single">50 мин <span>2 750 ₽</span></span>
+              <span class="price-couple">2 часа <span>4 750 ₽</span></span>
+            </p>
+          </div>
+          <a href="/auth" class="banner-btn">Подобрать психолога</a>
+        </div>
+      </div>
+    </section>
+
+     <section class="help">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">
+            С чем <span>поможет</span> психолог?
+          </h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="image">
+                  <img class="lazyload" src="{{ url_for('static', filename='imgs/panda.png') }}">
+                </div>
+                <p class="text">Уметь находить общий язык со всеми людьми</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img class="lazyload" src="{{ url_for('static', filename='imgs/bambo.png') }}">
+                </div>
+                <p class="text">Управлять стрессом и тревогой</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img class="lazyload" src="{{ url_for('static', filename='imgs/panda_2.png') }}">
+                </div>
+                <p class="text">Принять себя и повысить самооценку</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img class="lazyload" src="{{ url_for('static', filename='imgs/bambo.png') }}">
+                </div>
+                <p class="text">Пережить переезд, расставание, потерю близкого</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img class="lazyload" src="{{ url_for('static', filename='imgs/panda_3.png') }}">
+                </div>
+                <p class="text">Научиться отстаивать личные границы</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img class="lazyload" src="{{ url_for('static', filename='imgs/bambo.png') }}">
+                </div>
+                <p class="text">Найти мотивацию работать</p>
+              </div>
+            </div>
+            <div id="helps-swiper-pagination" class="swiper-pagination"></div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="/auth">Хочу обсудить свою ситуацию</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="therapists">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">
+            Как мы <span>выбираем</span> лучших специалистов
+          </h2>
+          <ul class="list">
+            <li class="item">
+              <p class="caption">Образование</p>
+              <ul class="bullet">
+                <li>Наличие высшего образования в области психологии или медицины (психиатрия)</li>
+                <li>Документы, подтверждающие переподготовку в психотерапевтической сфере</li>
+              </ul>
+            </li>
+            <li class="item">
+              <p class="caption">Опыт работы</p>
+              <ul class="bullet">
+                <li>Подтвержденный опыт работы в области психотерапии не менее 3 лет</li>
+                <li>Практика, направленная на решение реальных проблем клиентов</li>
+              </ul>
+            </li>
+            <li class="item">
+              <p class="caption">Рекомендации</p>
+              <ul class="bullet">
+                <li>Рекомендации от профессиональных супервизоров</li>
+                <li>Отзывы коллег, которые могут подтвердить уровень профессионализма</li>
+                <li>Рекомендации от психологических ассоциаций или организаций</li>
+              </ul>
+            </li>
+            <li class="item">
+              <p class="caption">Собеседование</p>
+              <ul class="bullet">
+                <li>Обсуждаем конкретные примеры успешных кейсов из практики</li>
+                <li>Проверяем практические навыки работы с клиентами</li>
+                <li>Оцениваем способность кандидата к анализу и решению проблем</li>
+              </ul>
+            </li>
+            <li class="item">
+              <p class="caption">Этика</p>
+              <ul class="bullet">
+                <li>Психолог должен разделять наши ценности и принципы</li>
+                <li>Профессионал не имеет права судить или осуждать клиентов</li>
+                <li>Этика и уважение к клиенту — главные ориентиры в работе психолога</li>
+              </ul>
+            </li>
+            <li class="item">
+              <p class="caption">Профессиональное развитие</p>
+              <ul class="bullet">
+                <li>Регулярное участие в семинарах и тренингах для психологов</li>
+                <li>Супервизии с опытными специалистами для углубленного анализа случаев</li>
+                <li>Поощряем участие в научных и профессиональных конференциях
