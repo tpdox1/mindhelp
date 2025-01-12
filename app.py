@@ -195,6 +195,25 @@ def register():
         app.logger.error(f"Error during registration: {e}")
         return jsonify({"error": "Произошла ошибка при регистрации"}), 500
 
+@app.route('/get_client_info', methods=['POST'])
+def get_client_info():
+    phone = request.json.get('phone')
+    conn = get_db_connection()
+    if conn is None:
+        return jsonify({"error": "Database connection failed"}), 500
+
+    try:
+        cursor = conn.cursor()
+        cursor.execute("SELECT name, email FROM clients WHERE phone = %s", (phone,))
+        client = cursor.fetchone()
+        conn.close()
+        if client:
+            return jsonify({"name": client[0], "email": client[1]})
+        else:
+            return jsonify({"message": "Client not found"}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
     
 
 if __name__ == '__main__':
