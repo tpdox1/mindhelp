@@ -1,8 +1,9 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, render_template
 import psycopg2
+import os
 from psycopg2 import OperationalError
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.getcwd()) 
 
 # Подключение к базе данных
 def get_db_connection():
@@ -21,7 +22,7 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return render_template_string(open('profile.html').read())
+    return render_template_string(open('index.html', encoding='utf-8').read())
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -64,6 +65,15 @@ def submit():
     except Exception as e:
         app.logger.error(f"Error during data insertion: {e}")
         return 'Произошла ошибка при отправке формы.', 500
+
+@app.route('/certificats')
+def certificats_page():  
+    return render_template('certificats.html')
+
+@app.route('/tests')
+def tests_page():  
+    return render_template('tests.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
