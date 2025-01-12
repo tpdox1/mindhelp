@@ -85,48 +85,42 @@
         </div>
       </div>
     </div>
-
-    <section id="questions">
-      <div class="container">
-        <div class="form-container">
-          <h2>Общие вопросы</h2>
-          <form id="user-info">
-            <form id="consultation-form" action="/submit" method="post">
-              <div class="form-group">
-                <label for="name">Имя или псевдоним</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="experience">Был ли у вас опыт терапии?</label>
-                <select id="experience" name="experience">
-                  <option value="yes">Да</option>
-                  <option value="no">Нет</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="timezone">Часовой пояс</label>
-                <select id="timezone" name="timezone">
-                  <option value="Moscow">+03:00 Москва, Россия</option>
-                  <option value="other">Другой</option>
-                </select>
-              </div>
-            </form>
-            
-          </form>
+    <form id="consultation-form" action="/submit" method="post">
+      <section id="questions">
+        <div class="container">
+          <div class="form-container">
+            <h2>Общие вопросы</h2>
+            <div class="form-group">
+              <label for="name">Имя или псевдоним</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="experience">Был ли у вас опыт терапии?</label>
+              <select id="experience" name="experience">
+                <option value="yes">Да</option>
+                <option value="no">Нет</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timezone">Часовой пояс</label>
+              <select id="timezone" name="timezone">
+                <option value="Moscow">+03:00 Москва, Россия</option>
+                <option value="other">Другой</option>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="specialists">
-      <div class="container">
-        <div class="form-container">
-          <h2>Выбор психолога</h2>
-          <p>168 специалистов могут вам подойти</p>
-          <form id="consultation-form">
+      </section>
+    
+      <section id="specialists">
+        <div class="container">
+          <div class="form-container">
+            <h2>Выбор психолога</h2>
+            <p>168 специалистов могут вам подойти</p>
             <div class="form-group">
               <label for="consultation-type">Вид консультации</label>
               <select id="consultation-type" name="consultation-type">
@@ -153,23 +147,21 @@
                 <option value="female">Женщина</option>
               </select>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="schedule">
-      <div class="container">
-        <div class="form-container">
-          <h2>Предпочтение по времени сессии</h2>
-          <form id="schedule-form">
+      </section>
+    
+      <section id="schedule">
+        <div class="container">
+          <div class="form-container">
+            <h2>Предпочтение по времени сессии</h2>
             <div class="form-group">
               <label for="date">Дата</label>
-              <input type="date" id="date" name="date">
+              <input type="date" id="date" name="date" required>
             </div>
             <div class="form-group">
               <label for="time">Время (местное)</label>
-              <select id="time" name="time">
+              <select id="time" name="time" required>
                 <option value="10:00">10:00</option>
                 <option value="11:00">11:00</option>
                 <option value="12:00">12:00</option>
@@ -183,21 +175,17 @@
                 <option value="20:00">20:00</option>
               </select>
             </div>
-          </form>
+          </div>
+        </div>
+      </section>
+    
+      <div id="main-page">
+        <div class="therapist__actions">
+          <button type="submit" class="therapist__btn ysn-main-page-button">Записаться на консультацию</button>
         </div>
       </div>
-    </section>
-
-    <div id="main-page">
-      <div class="therapist__actions">
-        <a class="therapist__btn ysn-main-page-button">Записаться на консультацию</a>
-        <div class="row d-flex flex-column align-items-center justify-content-center mt-5">
-        </div>
-      </div>
-    </div>
-
-  </div>
-
+    </form>
+    
   <script src="scripts.js"></script>
 </body>
 

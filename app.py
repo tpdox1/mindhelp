@@ -21,7 +21,7 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return render_template_string(open('index.html').read())
+    return render_template_string(open('profile.html').read())
 
 @app.route('/submit', methods=['POST'])
 def submit():
