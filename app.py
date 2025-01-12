@@ -3,7 +3,7 @@ import psycopg2
 import os
 from psycopg2 import OperationalError
 
-app = Flask(__name__, template_folder=os.getcwd()) 
+app = Flask(__name__)
 
 # Подключение к базе данных
 def get_db_connection():
@@ -215,7 +215,14 @@ def get_client_info():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-    
+@app.route('/certificats')
+def certificats():  
+    return render_template('certificats.html')
+
+@app.route('/feedback')
+def tests(): 
+    return render_template('feedback.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

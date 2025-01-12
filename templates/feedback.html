@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Психологи онлайн на MindHelp</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">    
+  
+
+</head>
+
+
+<body>
+
+  <div class="page-wrap after">
+    <div class="header-container b__s">
+      <div class="header !_z-[101]">
+        <div class="header__overlay"></div>
+        <div class="container">
+          <div class="row header__row flex-nowrap">
+            <div class="col-auto col-lg-2">
+              <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='imgs/logo.svg') }}" class="header__logo">
+              </a>
+            </div>
+            <div class="col px-0">
+              <nav class="navbar navbar-expand navbar-light justify-content-center p-0">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="/feedback" target="_blank" class="nav-link">Обратная связь</a>
+                </li>
+                <li class=" nav-item">
+                      <a href="/certificats" target="_blank" class="nav-link" >Сертификаты</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/tests" class="nav-link">
+                      <div>Психологические тесты</div>
+                    </a>
+                  </li>
+                  <li class="nav-item d-sm-none">
+                    <a class="nav-link header__link" href="/auth">
+                      Вход
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-auto col-lg-3">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <div class="header__actions">
+                    <a class="nav-link header__link" href="/auth">
+                      <svg class="icon icon-lock header__link-icon">
+                        <use xlink:href="#lock"></use>
+                      </svg>
+                      Вход
+                    </a> <a class="header__btn text-nowrap" href="/auth">
+                      Регистрация&nbsp;
+                    </a>
+                  </div>
+                  <button class="header__menu-btn" type="button" data-toggle="dropdown" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a target="_blank" class="dropdown-item" href="https://work.yasno.live/psychologist">Для
+                      психологов</a>
+                    <a target="_blank" class="dropdown-item"
+                      href="https://business.yasno.live/?utm_source=Yasno_live&amp;utm_medium=refferal&amp;utm_content=button">Для
+                      бизнеса</a>
+                    <a class="dropdown-item" href="/tests">Психологические тесты</a>
+                    <a class="dropdown-item" href="/blog">Блог</a>
+                      Вход
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-wrap after">
+          <div class="container">
+            <h1>Форма обратной связи</h1>
+            <form action="/submit_feedback" method="post">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" required><br><br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br><br>
+              <label for="message">Сообщение:</label><br>
+              <textarea id="message" name="message" rows="4" required></textarea><br><br>
+              <input type="submit" value="Отправить">
+            </form>
+          </div>
+        </div>
