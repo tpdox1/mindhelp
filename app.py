@@ -21,7 +21,11 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return render_template_string(open('templates/auth.html').read())
+    return render_template('index.html')
+
+@app.route('/auth')
+def auth():
+    return render_template('auth.html')
 
 
 @app.route('/submit', methods=['POST'])
